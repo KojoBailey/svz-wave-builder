@@ -49,7 +49,7 @@ generateWave factory = foldr1 (++) $
 
     addDelays :: Wave -> Focus -> Wave
     addDelays wave focus = case focus of
-      Start -> intersperse (Delay 8) wave ++ [Delay 4]
+      Start -> intersperse (Delay 6) wave ++ [Delay 4]
       Filler -> intersperse (Delay 2) wave ++ [Delay 2]
       Main   -> intersperse (Delay 3) wave ++ [DeathDelay]
 
